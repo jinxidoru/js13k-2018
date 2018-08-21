@@ -5,6 +5,7 @@ kontra.init();
 //------------------------------------------------------------
 const ctx = kontra.context;
 const mid = kontra.canvas.height / 2;  // midpoint of the canvas
+const giant = document.getElementById("giant");
 
 const waveWidth = 2;
 const waveHeight = kontra.canvas.height / 3;
@@ -227,6 +228,7 @@ function show(el) {
 function start() {
   audio.currentTime = 0;
   firstTime = 0;
+  giant.style.display = "inline-block";
   ship.points = [];
   ship.y = mid;
   Array.from(document.querySelectorAll('.ui > *')).forEach(hide);
@@ -398,6 +400,8 @@ let ship = kontra.sprite({
     this.points.push({x: this.x + move, y: this.y});
     neonRect(this.x, this.y, this.width, this.height, 0, 163, 220);
     neonLine(this.points, move, 0, 163, 220);
+
+    giant.style.top = (this.y-23) + "px";
   }
 });
 

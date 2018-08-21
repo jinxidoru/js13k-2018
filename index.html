@@ -123,6 +123,19 @@
     width: 100%;
     padding: 0;
   }
+
+  #giant {
+    width: 30px;
+    height: 46px;
+    background: url(giant.gif) no-repeat;
+    background-size: 100%;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 305px;
+    z-index: 9999;
+  }
+
   </style>
 </head>
 <body>
@@ -143,6 +156,8 @@
       <input type="file" class="btn" id="uploadFile" aria-label="Upload Song">
     </div>
 </div>
+
+<div id="giant"></div>
 
 <script src="index.js"></script>
 </body>
