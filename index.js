@@ -542,7 +542,7 @@ loop = kontra.gameLoop({
 async function main() {
 
   // music from https://opengameart.org/content/adventure-theme
-  await generateWaveData('./SuperHero_original.ogg');
+  await generateWaveData('./hyena-laugh_daniel-simion.mp3');
   getBestTime();
   intro();
 }
